@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkLift | SEO Solutions</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Importing Roboto Font */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+        /* Body */
+        html,
+        body {
+            height: 100%;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+        }
+
+        /* General Styles */
+        .section {
+            padding-top: 80px;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .section .content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Backgrounds */
+        .bg-img {
+            background: url('tes3.jpg') no-repeat center center/cover;
+            color: #fff;
+        }
+
+        .bg-img-alt {
+            background: url('tes1.jpg') no-repeat center center/cover;
+            color: #fff;
+        }
+
+        .bg-light {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #000;
+            color: #fff;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #007bff;
+        }
+
+        nav .login-btn {
+            border: 1px solid #fff;
+            padding: 5px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav .login-btn:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        /* Section Titles */
+        h1,
+        h2 {
+            margin-bottom: 20px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        /* Get Started Button */
+        .get-started-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin-top: 20px;
+            background-color: #ff6f00;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            text-align: center;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .get-started-btn:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+        }
+
+        /* Services */
+        .services-list {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .service {
+            background: rgba(255, 255, 255, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            max-width: 250px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .service:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .service h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .service p {
+            color: #555;
+        }
+
+        /* Contact Form */
+        form {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        form input,
+        form textarea,
+        form button {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 10px;
+            font-size: 1rem;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        form button {
+            background-color: #ff6f00;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 10px 20px;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 1.2rem;
+            }
+
+            .services-list {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service {
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+
+            h1,
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .get-started-btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+
+            form input,
+            form textarea,
+            form button {
+                max-width: 100%;
+                padding: 8px;
+            }
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+        }
+
+        .modal h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .modal form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .modal input,
+        .modal button {
+            padding: 10px;
+            font-size: 1rem;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .modal button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .modal button:hover {
+            background-color: #0056b3;
+        }
+
+        .additional-options {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .additional-options a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .additional-options a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">LinkLift</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+            <a href="#" class="login-btn">Login</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <main id="home" class="section bg-img">
+        <div class="content">
+            <h1>Welcome to LinkLift</h1>
+            <p>Your one-stop solution for advanced SEO services to elevate your online presence.</p>
+            <a href="link2.html" class="get-started-btn">Get Started</a>
+        </div>
+    </main>
+
+    <!-- About Section -->
+    <section id="about" class="section bg-img-alt">
+        <div class="content">
+            <h2>About Us</h2>
+            <p>We are a team of dedicated professionals helping businesses succeed in the digital space.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section bg-img-alt">
+        <div class="content">
+            <h2>Our Services</h2>
+            <div class="services-list">
+                <div class="service">
+                    <h3>SEO Audits</h3>
+                    <p>Comprehensive analysis of your website to optimize its performance.</p>
+                </div>
+                <div class="service">
+                    <h3>Keyword Research</h3>
+                    <p>Identify the best keywords to rank your business on search engines.</p>
+                </div>
+                <div class="service">
+                    <h3>Backlink Building</h3>
+                    <p>Build high-quality backlinks to improve your site's authority.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-light">
+        <div class="content">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 LinkLift. All Rights Reserved. <a href="#">Privacy Policy</a></p>
+    </footer>
+
+    <!-- Modal Login -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+                <div>
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Remember me</label>
+                </div>
+                <button type="submit">Login</button>
+                <div class="additional-options">
+                    <a href="#">Forgot Password?</a> | <a href="#">Register</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Modal Logic
+        const loginModal = document.getElementById('login-modal');
+        const loginBtn = document.querySelector('.login-btn');
+        const closeModal = document.querySelector('.close');
+
+        // Open modal when login button is clicked
+        loginBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            loginModal.style.display = 'block';
+        });
+
+        // Close modal when 'x' is clicked
+        closeModal.addEventListener('click', () => {
+            loginModal.style.display = 'none';
+        });
+
+        // Close modal when clicking outside of the modal content
+        window.addEventListener('click', (e) => {
+            if (e.target === loginModal) {
+                loginModal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>
