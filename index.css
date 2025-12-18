@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.bg-img {
+    background: url('../images/tes3.jpg') center/cover;
+    color: white;
+}
+
+.bg-img-alt {
+    background: url('../images/tes1.jpg') center/cover;
+    color: white;
+}
+
+.bg-light {
+    background: #f9f9f9;
+}
+
+.services-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.get-started-btn {
+    background: #ff6f00;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+}
+
+.modal.show {
+    display: block;
+}
+
+.modal-content {
+    background: white;
+    width: 300px;
+    margin: 10% auto;
+    padding: 20px;
+}
