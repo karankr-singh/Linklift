@@ -17,7 +17,6 @@ window.addEventListener('click', (e) => {
     }
 });
 
-// Contact form
 const form = document.getElementById('contact-form');
 const response = document.getElementById('form-response');
 
